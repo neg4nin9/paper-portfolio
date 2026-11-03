@@ -47,7 +47,7 @@ export const translations = {
         },
         {
           label: 'Studied',
-          value: 'B.Sc. Informatics & Multimedia Technology, UCR — 2025',
+          value: 'B.Sc. Informatics & Multimedia Technology, UCR —\u00A02025',
         },
         {
           label: 'Studying',
@@ -59,7 +59,7 @@ export const translations = {
         },
         {
           label: 'Certifications',
-          value: 'Google Analytics 4 (2025), English C1 — CINDE Jobs Belt',
+          value: 'Google Analytics 4 (2025), English C1 — CINDE\u00A0Jobs\u00A0Belt',
         },
         {
           label: 'Working style',
@@ -262,7 +262,7 @@ export const translations = {
         },
         {
           label: 'Formación',
-          value: 'Bach. Informática y Tecnología Multimedia, UCR — 2025',
+          value: 'Bach. Informática y Tecnología Multimedia, UCR —\u00A02025',
         },
         {
           label: 'Cursando',
@@ -274,7 +274,7 @@ export const translations = {
         },
         {
           label: 'Certificaciones',
-          value: 'Google Analytics 4 (2025), Inglés C1 — CINDE Jobs Belt',
+          value: 'Google Analytics 4 (2025), Inglés C1 — CINDE\u00A0Jobs\u00A0Belt',
         },
         {
           label: 'Forma de trabajo',

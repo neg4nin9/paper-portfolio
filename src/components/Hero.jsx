@@ -39,8 +39,8 @@ export default function Hero() {
           <span className="rise block">Eddy Conejo</span>
         </h1>
 
-        <div className="mt-8 grid gap-10 md:mt-10 lg:grid-cols-12 lg:gap-8">
-          <div className="flex flex-col lg:col-span-6">
+        <div className="mt-8 grid gap-10 md:mt-10 lg:grid-cols-12 lg:gap-x-8 lg:gap-y-6">
+          <div className="lg:col-span-6 lg:col-start-1 lg:row-start-1">
             <p className="rise d-2 max-w-[42ch] font-mono text-[11.5px] leading-relaxed tracking-[0.04em] text-cobalt text-pretty sm:max-w-none sm:text-[13px]">
               {h.role}
             </p>
@@ -70,16 +70,9 @@ export default function Hero() {
                 {h.email}
               </a>
             </div>
-
-            {/* The sheet's foot sits on the same baseline as the plate. */}
-            <div className="mt-10 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-line pt-3 font-mono text-[10px] tracking-[0.12em] text-muted lg:mt-auto lg:pt-4">
-              <span>01 / 06</span>
-              <span className="hidden sm:inline">{h.place}</span>
-              <span>{lang === 'en' ? 'EN' : 'ES'}</span>
-            </div>
           </div>
 
-          <figure className="rise-plate d-2 relative lg:col-span-5 lg:col-start-8">
+          <figure className="rise-plate d-2 relative lg:col-span-5 lg:col-start-8 lg:row-span-2 lg:row-start-1">
             <RegMark className="-top-3.5 -left-3.5 hidden sm:block" />
             <div className="plate-frame duotone halftone aspect-[4/5] w-full overflow-hidden">
               <img
@@ -99,6 +92,13 @@ export default function Hero() {
               <span className="shrink-0 tabular-nums">{h.coords}</span>
             </figcaption>
           </figure>
+
+          {/* The sheet's foot sits on the baseline of the plate. */}
+          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-line pt-3 font-mono text-[10px] tracking-[0.12em] text-muted lg:col-span-6 lg:col-start-1 lg:row-start-2 lg:self-end lg:pt-4">
+            <span>01 / 06</span>
+            <span className="hidden sm:inline">{h.place}</span>
+            <span>{lang === 'en' ? 'EN' : 'ES'}</span>
+          </div>
         </div>
       </div>
     </section>

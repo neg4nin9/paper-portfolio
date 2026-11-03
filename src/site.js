@@ -1,5 +1,9 @@
 export const EMAIL = 'eddyisaac000@gmail.com'
 
+export const PHONE = '+506 8443 6885'
+
+export const PHONE_HREF = 'tel:+50684436885'
+
 export const GITHUB = 'https://github.com/neg4nin9'
 
 export const CV = {

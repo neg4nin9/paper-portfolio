@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useLang } from '../LangContext'
-import { CV, EMAIL, GITHUB } from '../site'
+import { CV, EMAIL, GITHUB, PHONE, PHONE_HREF } from '../site'
 import { CheckIcon, CopyIcon, DownloadIcon, ExternalIcon } from './Icons'
 
 export default function Contact() {
@@ -55,6 +55,13 @@ export default function Contact() {
                 className="display-tight mt-2 block text-[clamp(1.2rem,3.6vw,2.4rem)] text-paper transition-colors duration-200 hover:text-magenta [overflow-wrap:anywhere]"
               >
                 {EMAIL}
+              </a>
+              <a
+                href={PHONE_HREF}
+                className="mt-2 inline-flex items-center gap-2 font-mono text-[0.8125rem] tracking-[0.04em] text-paper/70 transition-colors duration-150 hover:text-magenta"
+              >
+                <span className="lowercase tracking-[0.12em]">{c.phoneLabel}</span>
+                <span className="tabular-nums">{PHONE}</span>
               </a>
             </div>
 

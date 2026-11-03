@@ -47,7 +47,7 @@ export const translations = {
         },
         {
           label: 'Studied',
-          value: 'B.Sc. Informatics & Multimedia Technology, UCR — 2026',
+          value: 'B.Sc. Informatics & Multimedia Technology, UCR — 2025',
         },
         {
           label: 'Studying',
@@ -58,8 +58,8 @@ export const translations = {
           value: 'Spanish (native), English (C1, certified)',
         },
         {
-          label: 'Certified',
-          value: 'Google Analytics 4 — 2025',
+          label: 'Certifications',
+          value: 'Google Analytics 4 (2025), English C1 — CINDE Jobs Belt',
         },
         {
           label: 'Working style',
@@ -163,7 +163,7 @@ export const translations = {
         },
         {
           title: 'Design tools',
-          items: ['Figma', 'Photoshop', 'Illustrator', 'InDesign', 'Brand identity'],
+          items: ['Figma', 'Photoshop', 'Illustrator', 'InDesign', 'ArtCraft Suite', 'Brand identity'],
         },
         {
           title: 'Frontend',
@@ -171,7 +171,7 @@ export const translations = {
         },
         {
           title: 'Backend & data',
-          items: ['Laravel', 'PHP', 'Node.js', 'REST APIs', 'MySQL', 'PostgreSQL', 'MongoDB'],
+          items: ['Laravel', 'PHP', 'Node.js', 'Python', 'REST APIs', 'MySQL', 'PostgreSQL', 'MongoDB'],
         },
         {
           title: 'Infrastructure',
@@ -182,6 +182,8 @@ export const translations = {
             'Vercel',
             'AWS',
             'Linux',
+            'Windows',
+            'Bash',
             'GA4',
           ],
         },
@@ -192,6 +194,7 @@ export const translations = {
       title: 'Let’s build something',
       lead: 'A product, a redesign, or a role on your team. I answer email within a day.',
       emailLabel: 'Write to',
+      phoneLabel: 'tel.',
       copy: 'Copy address',
       copied: 'Address copied',
       downloadCV: 'Download CV',
@@ -259,7 +262,7 @@ export const translations = {
         },
         {
           label: 'Formación',
-          value: 'Bach. Informática y Tecnología Multimedia, UCR — 2026',
+          value: 'Bach. Informática y Tecnología Multimedia, UCR — 2025',
         },
         {
           label: 'Cursando',
@@ -270,8 +273,8 @@ export const translations = {
           value: 'Español (nativo), Inglés (C1 certificado)',
         },
         {
-          label: 'Certificado',
-          value: 'Google Analytics 4 — 2025',
+          label: 'Certificaciones',
+          value: 'Google Analytics 4 (2025), Inglés C1 — CINDE Jobs Belt',
         },
         {
           label: 'Forma de trabajo',
@@ -375,7 +378,7 @@ export const translations = {
         },
         {
           title: 'Herramientas de diseño',
-          items: ['Figma', 'Photoshop', 'Illustrator', 'InDesign', 'Identidad de marca'],
+          items: ['Figma', 'Photoshop', 'Illustrator', 'InDesign', 'ArtCraft Suite', 'Identidad de marca'],
         },
         {
           title: 'Frontend',
@@ -383,7 +386,7 @@ export const translations = {
         },
         {
           title: 'Backend y datos',
-          items: ['Laravel', 'PHP', 'Node.js', 'APIs REST', 'MySQL', 'PostgreSQL', 'MongoDB'],
+          items: ['Laravel', 'PHP', 'Node.js', 'Python', 'APIs REST', 'MySQL', 'PostgreSQL', 'MongoDB'],
         },
         {
           title: 'Infraestructura',
@@ -394,6 +397,8 @@ export const translations = {
             'Vercel',
             'AWS',
             'Linux',
+            'Windows',
+            'Bash',
             'GA4',
           ],
         },
@@ -404,6 +409,7 @@ export const translations = {
       title: 'Construyamos algo',
       lead: 'Un producto, un rediseño o un puesto en tu equipo. Respondo el correo en menos de un día.',
       emailLabel: 'Escribe a',
+      phoneLabel: 'tel.',
       copy: 'Copiar dirección',
       copied: 'Dirección copiada',
       downloadCV: 'Descargar CV',

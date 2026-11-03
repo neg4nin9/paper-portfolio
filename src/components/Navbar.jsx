@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import { useLang } from '../LangContext'
 import { EMAIL, SECTION_IDS } from '../site'
-import { MenuIcon } from './Icons'
+import { GlobeIcon, MenuIcon } from './Icons'
 
 export default function Navbar() {
   const { t, lang, setLang } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('')
+  const next = lang === 'es' ? 'en' : 'es'
 
   const links = [
     { id: 'about', label: t.nav.about },
@@ -75,13 +76,13 @@ export default function Navbar() {
           <span className="display text-[0.95rem] uppercase tracking-[-0.02em] [word-spacing:0.14em] misreg-hover">
             Eddy Conejo
           </span>
-          <span className="hidden font-mono text-[10px] tracking-[0.12em] text-muted sm:inline">
+          <span className="hidden font-mono text-[0.75rem] tracking-[0.1em] text-muted xl:inline">
             ui/ux · full-stack
           </span>
         </a>
 
         <nav aria-label={t.nav.navigation} className="hidden lg:block">
-          <ul className="flex items-center gap-7">
+          <ul className="flex items-center gap-6">
             {links.map((link) => {
               const current = active === link.id
               return (
@@ -89,7 +90,7 @@ export default function Navbar() {
                   <a
                     href={`#${link.id}`}
                     aria-current={current ? 'true' : undefined}
-                    className={`font-mono text-[11px] tracking-[0.1em] transition-colors duration-200 ${
+                    className={`font-mono text-[0.8125rem] tracking-[0.06em] transition-colors duration-200 ${
                       current ? 'text-cobalt' : 'text-muted hover:text-ink'
                     }`}
                   >
@@ -101,32 +102,24 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-4">
-          <div
-            className="flex items-center gap-1 font-mono text-[11px] tracking-[0.08em]"
-            role="group"
-            aria-label={t.nav.language}
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setLang(next)}
+            aria-label={t.nav.switchTo}
+            title={t.nav.switchTo}
+            className="lang-btn"
           >
-            {['es', 'en'].map((code, index) => (
-              <span key={code} className="flex items-center gap-1">
-                {index === 1 && <span className="text-line-strong">/</span>}
-                <button
-                  type="button"
-                  onClick={() => setLang(code)}
-                  aria-pressed={lang === code}
-                  className={`px-1 py-1 lowercase transition-colors duration-200 ${
-                    lang === code
-                      ? 'text-ink underline decoration-cobalt decoration-2 underline-offset-4'
-                      : 'text-muted hover:text-ink'
-                  }`}
-                >
-                  {code}
-                </button>
-              </span>
-            ))}
-          </div>
+            <GlobeIcon className="h-4 w-4" />
+            <span className="hidden sm:inline" lang={next}>
+              {t.nav.switchName}
+            </span>
+            <span className="sm:hidden" lang={next}>
+              {t.nav.switchCode}
+            </span>
+          </button>
 
-          <a href={`mailto:${EMAIL}`} className="btn btn-ink hidden lg:inline-flex">
+          <a href={`mailto:${EMAIL}`} className="btn btn-ink btn-sm hidden lg:inline-flex">
             {t.nav.talk}
           </a>
 
@@ -135,9 +128,10 @@ export default function Navbar() {
             onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
             aria-controls="mobile-menu"
-            className="-mr-2 flex items-center gap-2 p-2 font-mono text-[11px] tracking-[0.1em] lg:hidden"
+            aria-label={open ? t.nav.close : t.nav.menu}
+            className="-mr-2 flex items-center gap-2 whitespace-nowrap p-2 font-mono text-[0.8125rem] tracking-[0.06em] lg:hidden"
           >
-            <span>{open ? t.nav.close : t.nav.menu}</span>
+            <span className="hidden min-[480px]:inline">{open ? t.nav.close : t.nav.menu}</span>
             <MenuIcon open={open} />
           </button>
         </div>
@@ -159,7 +153,7 @@ export default function Navbar() {
                   className="flex items-baseline justify-between py-3"
                 >
                   <span className="display text-[1.6rem] uppercase">{link.label}</span>
-                  <span className="font-mono text-[10px] text-muted">
+                  <span className="font-mono text-[0.75rem] text-muted">
                     {String(index + 2).padStart(2, '0')}
                   </span>
                 </a>

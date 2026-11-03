@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="rise flex flex-wrap items-center gap-x-4 gap-y-2">
           <span className="label">{h.eyebrow}</span>
           <span className="hidden h-px w-10 bg-line-strong sm:block" />
-          <span className="flex items-center gap-2 font-mono text-[10px] tracking-[0.12em] text-ink">
+          <span className="flex items-center gap-2 font-mono text-[0.75rem] tracking-[0.08em] text-ink">
             <span className="h-2 w-2 shrink-0 bg-magenta" aria-hidden="true" />
             {h.available}
           </span>
@@ -41,7 +41,7 @@ export default function Hero() {
 
         <div className="mt-8 grid gap-10 md:mt-10 lg:grid-cols-12 lg:gap-x-8 lg:gap-y-6">
           <div className="lg:col-span-6 lg:col-start-1 lg:row-start-1">
-            <p className="rise d-2 max-w-[42ch] font-mono text-[11.5px] leading-relaxed tracking-[0.04em] text-cobalt text-pretty sm:max-w-none sm:text-[13px]">
+            <p className="rise d-2 max-w-[42ch] font-mono text-[0.8125rem] leading-relaxed tracking-[0.03em] text-cobalt text-pretty sm:max-w-none sm:text-[0.9375rem]">
               {h.role}
             </p>
 
@@ -64,7 +64,7 @@ export default function Hero() {
               </a>
               <a
                 href={`mailto:${EMAIL}`}
-                className="ml-1 hidden items-center gap-2 font-mono text-[11px] tracking-[0.08em] text-muted transition-colors hover:text-cobalt sm:inline-flex"
+                className="ml-1 hidden items-center gap-2 font-mono text-[0.8125rem] tracking-[0.04em] text-muted transition-colors hover:text-cobalt sm:inline-flex"
               >
                 <MailIcon className="h-3.5 w-3.5" />
                 {h.email}
@@ -85,7 +85,7 @@ export default function Hero() {
                 className="h-full w-full scale-[1.04] object-cover object-[52%_26%]"
               />
             </div>
-            <figcaption className="mt-3 flex flex-col gap-1 font-mono text-[10px] tracking-[0.1em] text-muted">
+            <figcaption className="mt-3 flex flex-col gap-1 font-mono text-[0.75rem] tracking-[0.08em] text-muted">
               <span className="lowercase">
                 <span className="text-ink">fig. 01</span> — {h.caption}
               </span>
@@ -94,7 +94,7 @@ export default function Hero() {
           </figure>
 
           {/* The sheet's foot sits on the baseline of the plate. */}
-          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-line pt-3 font-mono text-[10px] tracking-[0.12em] text-muted lg:col-span-6 lg:col-start-1 lg:row-start-2 lg:self-end lg:pt-4">
+          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-line pt-3 font-mono text-[0.75rem] tracking-[0.08em] text-muted lg:col-span-6 lg:col-start-1 lg:row-start-2 lg:self-end lg:pt-4">
             <span>01 / 06</span>
             <span className="hidden sm:inline">{h.place}</span>
             <span>{lang === 'en' ? 'EN' : 'ES'}</span>

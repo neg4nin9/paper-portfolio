@@ -5,9 +5,9 @@ export default function SectionHead({ folio, label, title, note }) {
         {folio} / {label}
       </p>
       <div className="md:col-span-10">
-        <h2 className="display text-[clamp(2.15rem,5.2vw,4rem)] uppercase">{title}</h2>
+        <h2 className="display text-[clamp(1.7rem,5.2vw,4rem)] uppercase">{title}</h2>
         {note ? (
-          <p className="mt-5 max-w-[54ch] text-[0.975rem] leading-[1.7] text-muted text-pretty">{note}</p>
+          <p className="mt-5 max-w-[56ch] text-[1rem] leading-[1.7] text-muted text-pretty">{note}</p>
         ) : null}
       </div>
     </div>

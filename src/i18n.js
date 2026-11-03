@@ -16,7 +16,9 @@ export const translations = {
       skills: 'Stack',
       contact: 'Contact',
       talk: "Let's talk",
-      language: 'Language',
+      switchName: 'Español',
+      switchCode: 'ES',
+      switchTo: 'Switch to Spanish',
     },
     hero: {
       eyebrow: 'Portfolio 2026',
@@ -67,8 +69,7 @@ export const translations = {
     },
     work: {
       label: 'Selected work',
-      title: 'Five things I built',
-      note: 'A shortener in production, a data dashboard, two commerce platforms and one UX case study — shipped between 2024 and 2026.',
+      title: 'Projects worth a look',
       stackLabel: 'Built with',
       plates: [
         {
@@ -193,6 +194,9 @@ export const translations = {
       availability: 'Open to work — remote or on-site in Costa Rica',
       place: 'San Ramón, Costa Rica — UTC−6',
       cvNote: 'CV in English (PDF, 1 page)',
+      linksLabel: 'Elsewhere',
+      githubNote: 'Profile and repositories',
+      githubCta: 'Open GitHub profile',
     },
     footer: {
       rights: '© 2026 Eddy Conejo',
@@ -220,7 +224,9 @@ export const translations = {
       skills: 'Stack',
       contact: 'Contacto',
       talk: 'Hablemos',
-      language: 'Idioma',
+      switchName: 'English',
+      switchCode: 'EN',
+      switchTo: 'Cambiar a inglés',
     },
     hero: {
       eyebrow: 'Portafolio 2026',
@@ -271,8 +277,7 @@ export const translations = {
     },
     work: {
       label: 'Proyectos',
-      title: 'Cinco cosas que construí',
-      note: 'Un acortador en producción, un dashboard de datos, dos plataformas de comercio y un caso de estudio UX — entregados entre 2024 y 2026.',
+      title: 'Proyectos que vale la pena ver',
       stackLabel: 'Hecho con',
       plates: [
         {
@@ -397,6 +402,9 @@ export const translations = {
       availability: 'Disponible — remoto o presencial en Costa Rica',
       place: 'San Ramón, Costa Rica — UTC−6',
       cvNote: 'CV en español (PDF, 1 página)',
+      linksLabel: 'También en línea',
+      githubNote: 'Perfil y repositorios',
+      githubCta: 'Abrir perfil de GitHub',
     },
     footer: {
       rights: '© 2026 Eddy Conejo',

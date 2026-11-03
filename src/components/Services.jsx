@@ -22,7 +22,7 @@ export default function Services() {
               <ServiceGlyph name={service.glyph} className="h-8 w-8 text-cobalt" />
               <h3 className="display-tight mt-5 text-[1.15rem]">{service.title}</h3>
               <p className="mt-2 text-[0.9375rem] leading-[1.65] text-muted">{service.body}</p>
-              <p className="mt-4 font-mono text-[10px] leading-[1.7] tracking-[0.04em] text-muted">
+              <p className="mt-4 font-mono text-[0.75rem] leading-[1.65] tracking-[0.02em] text-muted">
                 <span className="text-cobalt">{s.givesLabel}</span> — {service.gives}
               </p>
             </li>

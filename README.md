@@ -19,12 +19,12 @@ Un solo gesto fuerte: el nombre a tamaño de portada y el pliego del retrato. To
 | `paper` | `#ECE9DF` | fondo base |
 | `paper-deep` | `#E2DED1` | bandas de sección |
 | `ink` | `#17150F` | texto, bloques de tinta |
-| `muted` | `#57523F` | texto secundario (contraste 6.4:1) |
+| `muted` | `#4F4A38` | texto secundario (contraste 7.4:1) |
 | `cobalt` | `#1E2BD0` | tinta 1, enlaces y acentos (7.4:1) |
 | `magenta` | `#FF3D7F` | tinta 2, formas y realces |
 | `sun` | `#FFC400` | tercera tinta, solo en figuras |
 
-- **Tipografía:** Archivo variable (eje de ancho, 400–900) para display y texto; Space Mono para folios, fichas técnicas y colofón.
+- **Tipografía:** Archivo variable (eje de ancho, 400–900) para display y texto; Space Mono para folios, fichas técnicas y colofón. Ningún texto de interfaz baja de 12 px, y el cuerpo va a 16 px.
 - **Dispositivos estructurales:** numeración de sección (01–06) como folios reales del documento, reglas de 1 px, fichas técnicas con `dl`, pies de figura.
 - **Textura:** grano de papel en overlay fijo y trama de semitono sobre el retrato.
 - **Registro imperfecto:** el nombre y los títulos llevan un desplazamiento de las dos tintas, como una prueba de imprenta mal registrada.
@@ -34,7 +34,21 @@ Un solo gesto fuerte: el nombre a tamaño de portada y el pliego del retrato. To
 - Copy bilingüe real, derivado del CV de Eddy (`public/Eddy-Conejo_CV_EN.pdf` y `..._ES.pdf`): formación, certificaciones, stack y proyectos.
 - Los cinco proyectos se presentan como pliegos numerados; cada uno lleva una figura SVG dibujada a mano (no capturas falsas): la ruta de redirección de LinkTrim, el gráfico de medallas, el escaparate de Grupo Zenith, el kit de identidad de CRFiguras y el wireframe anotado de Almacenes Unidos.
 - La ficha de perfil sustituye las cifras de vanidad ("1+ años", "∞ café") por datos verificables.
-- Se retiraron los enlaces sociales vacíos (apuntaban a `github.com` a secas); cuando existan las cuentas reales se añaden en `src/components/Contact.jsx`.
+- El perfil de GitHub ([github.com/neg4nin9](https://github.com/neg4nin9)) es el único enlace social, en la sección de contacto.
+
+## Capturas de proyectos
+
+Los dibujos son el estado por defecto, no el definitivo. Para sustituir uno por una captura real basta con dejar el archivo en **`src/assets/projects/`** con el nombre del proyecto; el sitio lo detecta en el build y quita el dibujo. Ver [src/assets/projects/README.md](src/assets/projects/README.md).
+
+| Proyecto | Archivo |
+| --- | --- |
+| LinkTrim | `linktrim.jpg` |
+| Winter Olympics | `winter-olympics.jpg` |
+| Grupo Zenith | `grupo-zenith.jpg` |
+| CRFiguras | `crfiguras.jpg` |
+| Almacenes Unidos | `almacenes-unidos.jpg` |
+
+Formato: 1600 × 1000 px (16:10), JPG o WebP por debajo de 400 KB. Las capturas van a color; el duotono es solo del retrato.
 
 ## Accesibilidad y rendimiento
 
@@ -62,9 +76,11 @@ src/
   index.css            sistema de diseño (tokens, capas, material impreso)
   i18n.js              todo el copy ES/EN
   LangContext.jsx      idioma, persistencia y metadatos del documento
-  site.js              email, CVs e ids de sección
+  site.js              email, GitHub, CVs, ids de sección y slugs de proyecto
+  projectImages.js     capturas reales por nombre de archivo (fallback: dibujo)
+  assets/projects/     capturas de proyectos (ver README dentro)
   components/
-    Navbar.jsx         barra fija, scroll-spy, selector ES/EN, menú móvil
+    Navbar.jsx         barra fija, scroll-spy, botón de idioma, menú móvil
     Hero.jsx           portada: nombre, retrato duotono, marcas de registro
     About.jsx          perfil y ficha técnica
     Work.jsx           pliegos de proyectos

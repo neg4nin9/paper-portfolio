@@ -53,6 +53,28 @@ export function ArrowDownIcon({ className = 'h-4 w-4' }) {
   )
 }
 
+/* Globe, for the language switch. */
+export function GlobeIcon({ className = 'h-4 w-4' }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...base}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18" />
+      <ellipse cx="12" cy="12" rx="4" ry="9" />
+    </svg>
+  )
+}
+
+/* Leaves the site: used on links that open another tab. */
+export function ExternalIcon({ className = 'h-3.5 w-3.5' }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...base}>
+      <path d="M14 4h6v6" />
+      <path d="M20 4 11 13" />
+      <path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+    </svg>
+  )
+}
+
 export function ArrowUpIcon({ className = 'h-4 w-4' }) {
   return (
     <svg viewBox="0 0 24 24" className={className} {...base}>

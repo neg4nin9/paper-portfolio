@@ -1,29 +1,33 @@
-import { useInView } from '../hooks/useInView'
 import { useLang } from '../LangContext'
+import SectionHead from './SectionHead'
+import { ServiceGlyph } from './Icons'
 
 export default function Services() {
-  const [ref, inView] = useInView()
   const { t } = useLang()
   const s = t.services
-  return (
-    <section id="services" ref={ref} className="py-32 px-6">
-      <div className={`max-w-6xl mx-auto transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <p className="text-secondary text-sm font-medium tracking-widest uppercase mb-3">{s.label}</p>
-        <h2 className="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-12">
-          {s.heading} <span className="text-gradient">{s.highlight}</span>
-        </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {s.items.map((service, i) => (
-            <div key={i} className="gradient-border p-6 hover:translate-y-[-4px] transition-transform duration-300 group flex flex-col items-center text-center">
-              <span className="text-3xl block mb-3">{service.icon}</span>
-              <h3 className="text-base font-semibold font-['Space_Grotesk'] mb-1.5 text-white group-hover:text-secondary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-xs text-gray-muted leading-relaxed">{service.description}</p>
-            </div>
+  return (
+    <section id="services" className="section border-t border-line">
+      <div className="shell">
+        <SectionHead folio="04" label={s.label} title={s.title} note={s.note} />
+
+        <ul className="mt-12 grid gap-y-10 sm:grid-cols-2 sm:gap-x-8 lg:mt-16 lg:grid-cols-4">
+          {s.items.map((service, index) => (
+            <li
+              key={service.glyph}
+              className={`border-t border-line pt-5 ${
+                index > 0 ? 'lg:border-l lg:pl-6' : ''
+              }`}
+            >
+              <ServiceGlyph name={service.glyph} className="h-8 w-8 text-cobalt" />
+              <h3 className="display-tight mt-5 text-[1.15rem]">{service.title}</h3>
+              <p className="mt-2 text-[0.9375rem] leading-[1.65] text-muted">{service.body}</p>
+              <p className="mt-4 font-mono text-[10px] leading-[1.7] tracking-[0.04em] text-muted">
+                <span className="text-cobalt">{s.givesLabel}</span> — {service.gives}
+              </p>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )

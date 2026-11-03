@@ -1,49 +1,85 @@
-import { useInView } from '../hooks/useInView'
 import { useLang } from '../LangContext'
-
-const colors = [
-  'from-primary/30 to-primary/5',
-  'from-secondary/30 to-secondary/5',
-  'from-purple-400/30 to-purple-400/5',
-  'from-emerald-400/30 to-emerald-400/5',
-  'from-pink-400/30 to-pink-400/5',
-]
+import SectionHead from './SectionHead'
+import PlateFigure from './PlateFigures'
 
 export default function Work() {
-  const [ref, inView] = useInView()
   const { t } = useLang()
   const w = t.work
-  return (
-    <section id="work" ref={ref} className="py-32 px-6 bg-dark-light/50">
-      <div className={`max-w-6xl mx-auto transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <p className="text-secondary text-sm font-medium tracking-widest uppercase mb-3">{w.label}</p>
-        <h2 className="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-12">
-          {w.heading} <span className="text-gradient">{w.highlight}</span>
-        </h2>
 
-        <div className="grid gap-8">
-          {w.projects.map((project, i) => (
-            <div key={i} className="group gradient-border p-8 md:p-10 hover:translate-y-[-2px] transition-transform duration-300 cursor-pointer">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold font-['Space_Grotesk'] mb-3 text-white group-hover:text-secondary transition-colors">
-                    {project.title}
+  return (
+    <section id="work" className="section border-t border-line bg-paper-deep">
+      <div className="shell">
+        <SectionHead folio="03" label={w.label} title={w.title} note={w.note} />
+
+        <div className="mt-12 md:mt-16">
+          {w.plates.map((plate, index) => {
+            const figureFirst = index % 2 === 1
+
+            return (
+              <article
+                key={plate.title}
+                className="grid gap-y-6 border-t border-line py-10 md:grid-cols-12 md:gap-x-8 md:py-14"
+              >
+                <span className="font-mono text-[11px] tabular-nums tracking-[0.1em] text-muted md:col-span-1 md:pt-2">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+
+                <div
+                  className={
+                    figureFirst
+                      ? 'md:col-span-6 md:col-start-7 md:row-start-1'
+                      : 'md:col-span-6 md:col-start-2 md:row-start-1'
+                  }
+                >
+                  <h3 className="display misreg-hover text-[clamp(1.85rem,3.6vw,3rem)]">
+                    {plate.title}
                   </h3>
-                  <p className="text-gray-muted leading-relaxed max-w-xl">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {project.tags.map((tag, j) => (
-                      <span key={j} className="px-3 py-1 text-xs bg-white/5 text-gray-muted rounded-full border border-white/10">
-                        {tag}
-                      </span>
-                    ))}
+                  <p className="mt-2 font-mono text-[10.5px] lowercase tracking-[0.1em] text-cobalt">
+                    {plate.kind}
+                  </p>
+                  <p className="mt-5 max-w-[52ch] text-[0.975rem] leading-[1.72] text-muted">
+                    {plate.description}
+                  </p>
+
+                  <div className="mt-6 border-t border-line pt-3">
+                    <p className="font-mono text-[9.5px] lowercase tracking-[0.12em] text-muted">
+                      {w.stackLabel}
+                    </p>
+                    <ul className="mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                      {plate.stack.map((tool, toolIndex) => (
+                        <li key={tool} className="font-mono text-[10.5px] text-ink">
+                          {tool}
+                          {toolIndex < plate.stack.length - 1 ? (
+                            <span aria-hidden="true" className="ml-2 text-muted">
+                              /
+                            </span>
+                          ) : null}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-                <div className={`w-full md:w-48 h-32 rounded-xl bg-gradient-to-br ${colors[i]} flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-105`}>
-                  <span className="text-3xl transition-transform duration-300 group-hover:translate-x-1">→</span>
-                </div>
-              </div>
-            </div>
-          ))}
+
+                <figure
+                  className={
+                    figureFirst
+                      ? 'md:col-span-5 md:col-start-2 md:row-start-1'
+                      : 'md:col-span-5 md:col-start-8 md:row-start-1'
+                  }
+                >
+                  <div className="border border-line bg-paper p-3">
+                    <PlateFigure index={index} />
+                  </div>
+                  <figcaption className="mt-2 flex items-baseline justify-between gap-4 font-mono text-[9.5px] tracking-[0.1em] text-muted">
+                    <span>fig. {String(index + 2).padStart(2, '0')}</span>
+                    <span className="lowercase">
+                      plate {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </figcaption>
+                </figure>
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>

@@ -1,0 +1,188 @@
+export const translations = {
+  en: {
+    nav: {
+      about: 'About',
+      work: 'Work',
+      services: 'Services',
+      skills: 'Skills',
+      contact: 'Contact',
+      letsTalk: "Let's Talk",
+    },
+    hero: {
+      role: 'UI/UX Designer & Full-Stack Developer',
+      greeting: "Hi, I'm",
+      tagline: "I build complete digital products — from backend APIs to polished interfaces. Based in Costa Rica, open to remote opportunities.",
+      viewWork: 'View My Work',
+      getInTouch: 'Get in Touch',
+      downloadCV: 'Download CV',
+      available: 'Available for work',
+      scroll: 'Scroll',
+    },
+    about: {
+      label: 'About Me',
+      heading: 'Building with',
+      highlight: 'purpose',
+      p1: "I'm a UI/UX Designer and Full-Stack Developer. I hold a Bachelor's in Computer Science & Multimedia Technology from UCR and I'm currently pursuing a Licentiate with a UI/UX emphasis.",
+      p2: 'I enjoy working across the full stack — designing research-backed interfaces in Figma and bringing them to life with React and Laravel. I care about clean code, accessible design, and products that actually solve problems.',
+      stats: [
+        { number: '1+', label: 'Years Experience' },
+        { number: '4+', label: 'Projects Shipped' },
+        { number: 'C1', label: 'English Level' },
+        { number: '∞', label: 'Coffee Consumed' },
+      ],
+    },
+    work: {
+      label: 'Selected Work',
+      heading: 'Recent',
+      highlight: 'projects',
+      projects: [
+        {
+          title: 'LinkTrim — URL Shortener',
+          description: 'Full-stack URL shortener with low-latency redirects, three-layer collision prevention, automated link cleanup via cron, and a fully decoupled cloud deployment (Vercel + Render + Aiven).',
+          tags: ['React', 'Laravel', 'Docker', 'GitHub Actions', 'MySQL'],
+        },
+        {
+          title: 'Winter Olympics Data Viz',
+          description: 'Interactive analytics dashboard visualizing historical medal data (1980–2014). Features reactive filters by year, country and sport, with synchronized charts built on Recharts.',
+          tags: ['React', 'Recharts', 'Data Visualization', 'Vercel'],
+        },
+        {
+          title: 'Grupo Zenith — E-Commerce Platform',
+          description: 'Academic project for a real client. Built the Laravel REST API (JWT auth, Eloquent, pagination) and the React SPA (Context API, protected routes, admin dashboard with Chart.js) as part of a 6-person Scrum team.',
+          tags: ['React', 'Laravel', 'Tailwind CSS', 'Scrum', 'Chart.js'],
+        },
+        {
+          title: 'CRFiguras — E-Commerce & Branding',
+          description: 'Collaborative e-commerce site built on WordPress + WooCommerce. Responsible for the full brand identity (logo, typography, color palette) and responsive UI layout via Elementor.',
+          tags: ['WordPress', 'WooCommerce', 'Elementor', 'Branding'],
+        },
+        {
+          title: 'Almacenes Unidos — UX Case Study',
+          description: 'UX redesign case study. Led competitive benchmarking, conducted a full Nielsen heuristic evaluation, and delivered high-fidelity interactive prototypes in Figma.',
+          tags: ['Figma', 'UX Research', 'Heuristic Evaluation', 'Prototyping'],
+        },
+      ],
+    },
+    services: {
+      label: 'What I Do',
+      heading: 'My',
+      highlight: 'services',
+      items: [        
+        { icon: '🧠', title: 'UX Research', description: 'User interviews, heuristic evaluations, usability testing, and benchmarking to ground design decisions in evidence.' },
+        { icon: '🎨', title: 'UI Design', description: 'Pixel-perfect, accessible interfaces built in Figma with design systems, auto layout, and component libraries.' },
+        { icon: '⚙️', title: 'Full-Stack Development', description: 'End-to-end web apps with React on the frontend and Laravel REST APIs on the backend, deployed to the cloud.' },
+        { icon: '🚀', title: 'DevOps & Deployment', description: 'Containerized apps with Docker, CI/CD via GitHub Actions, and cloud deployments on Vercel, Render, and AWS.' },
+      ],
+    },
+    skills: {
+      label: 'Expertise',
+      heading: 'Skills &',
+      highlight: 'tools',
+    },
+    contact: {
+      label: 'Get in Touch',
+      heading: "Let's create something",
+      highlight: 'amazing',
+      headingEnd: 'together',
+      subtext: "Have a project in mind? I'd love to hear about it. Drop me a message and let's turn your vision into reality.",
+      cta: 'Say Hello',
+    },
+    footer: {
+      designed: 'Designed with 💜',
+      built: 'Built with React + Tailwind',
+    },
+  },
+  es: {
+    nav: {
+      about: 'Sobre mí',
+      work: 'Proyectos',
+      services: 'Servicios',
+      skills: 'Habilidades',
+      contact: 'Contacto',
+      letsTalk: 'Hablemos',
+    },
+    hero: {
+      role: 'Diseñador UI/UX & Desarrollador Full-Stack',
+      greeting: 'Hola, soy',
+      tagline: 'Construyo productos digitales completos — desde APIs backend hasta interfaces pulidas. Basado en Costa Rica, abierto a oportunidades remotas.',
+      viewWork: 'Ver mi trabajo',
+      getInTouch: 'Contáctame',
+      downloadCV: 'Descargar CV',
+      available: 'Disponible para trabajar',
+      scroll: 'Bajar',
+    },
+    about: {
+      label: 'Sobre mí',
+      heading: 'Construyendo con',
+      highlight: 'propósito',
+      p1: 'Soy Diseñador UI/UX y Desarrollador Full-Stack. Tengo un Bachillerato en Informática y Tecnología Multimedia de la UCR y actualmente curso la Licenciatura con énfasis en UI/UX.',
+      p2: 'Me gusta trabajar en todo el stack — diseñando interfaces respaldadas por investigación en Figma y dándoles vida con React y Laravel. Me importa el código limpio, el diseño accesible y los productos que realmente resuelven problemas.',
+      stats: [
+        { number: '1+', label: 'Años de experiencia' },
+        { number: '4+', label: 'Proyectos entregados' },
+        { number: 'C1', label: 'Nivel de inglés' },
+        { number: '∞', label: 'Café consumido' },
+      ],
+    },
+    work: {
+      label: 'Trabajo selecto',
+      heading: 'Proyectos',
+      highlight: 'recientes',
+      projects: [
+        {
+          title: 'LinkTrim — Acortador de URLs',
+          description: 'Acortador de URLs full-stack con redirecciones de baja latencia, prevención de colisiones en tres capas, limpieza automática de enlaces vía cron y despliegue cloud desacoplado (Vercel + Render + Aiven).',
+          tags: ['React', 'Laravel', 'Docker', 'GitHub Actions', 'MySQL'],
+        },
+        {
+          title: 'Winter Olympics Data Viz',
+          description: 'Dashboard de analítica interactiva con datos históricos de medallas (1980–2014). Filtros reactivos por año, país y deporte con gráficos sincronizados en Recharts.',
+          tags: ['React', 'Recharts', 'Visualización de datos', 'Vercel'],
+        },
+        {
+          title: 'Grupo Zenith — Plataforma E-Commerce',
+          description: 'Proyecto académico para cliente real. Desarrollé la API REST en Laravel (JWT, Eloquent, paginación) y la SPA en React (Context API, rutas protegidas, dashboard con Chart.js) en equipo Scrum de 6 personas.',
+          tags: ['React', 'Laravel', 'Tailwind CSS', 'Scrum', 'Chart.js'],
+        },
+        {
+          title: 'CRFiguras — E-Commerce & Branding',
+          description: 'Sitio e-commerce colaborativo en WordPress + WooCommerce. Responsable de la identidad visual completa (logo, tipografía, paleta) y la maquetación UI responsiva con Elementor.',
+          tags: ['WordPress', 'WooCommerce', 'Elementor', 'Branding'],
+        },
+        {
+          title: 'Almacenes Unidos — Caso de Estudio UX',
+          description: 'Caso de estudio de rediseño UX. Lideré el benchmarking competitivo, realicé una evaluación heurística completa de Nielsen y entregué prototipos interactivos de alta fidelidad en Figma.',
+          tags: ['Figma', 'Investigación UX', 'Evaluación Heurística', 'Prototipado'],
+        },
+      ],
+    },
+    services: {
+      label: 'Lo que hago',
+      heading: 'Mis',
+      highlight: 'servicios',
+      items: [
+        { icon: '🧠', title: 'Investigación UX', description: 'Entrevistas, evaluaciones heurísticas, pruebas de usabilidad y benchmarking para fundamentar las decisiones de diseño.' },
+        { icon: '🎨', title: 'Diseño UI', description: 'Interfaces accesibles y pixel-perfect construidas en Figma con sistemas de diseño, auto layout y bibliotecas de componentes.' },
+        { icon: '⚙️', title: 'Desarrollo Full-Stack', description: 'Aplicaciones web de extremo a extremo con React en el frontend y APIs REST en Laravel, desplegadas en la nube.' },
+        { icon: '🚀', title: 'DevOps & Despliegue', description: 'Apps contenedorizadas con Docker, CI/CD con GitHub Actions y despliegues en Vercel, Render y AWS.' },
+      ],
+    },
+    skills: {
+      label: 'Experiencia',
+      heading: 'Habilidades y',
+      highlight: 'herramientas',
+    },
+    contact: {
+      label: 'Contáctame',
+      heading: 'Creemos algo',
+      highlight: 'increíble',
+      headingEnd: 'juntos',
+      subtext: '¿Tienes un proyecto en mente? Me encantaría escucharlo. Envíame un mensaje y convirtamos tu visión en realidad.',
+      cta: 'Saludar',
+    },
+    footer: {
+      designed: 'Diseñado con 💜',
+      built: 'Hecho con React + Tailwind',
+    },
+  },
+}

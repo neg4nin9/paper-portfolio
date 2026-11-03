@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { useLang } from '../LangContext'
 import { PROJECT_SLUGS } from '../site'
 import { projectImage } from '../projectImages'
@@ -7,6 +8,28 @@ import PlateFigure from './PlateFigures'
 export default function Work() {
   const { t } = useLang()
   const w = t.work
+  const [viewer, setViewer] = useState(null)
+  const dialogRef = useRef(null)
+
+  /* Native <dialog> handles Escape and focus return; we only sync the state. */
+  useEffect(() => {
+    const dialog = dialogRef.current
+    if (!dialog) return
+    if (viewer && !dialog.open) {
+      dialog.showModal()
+    } else if (!viewer && dialog.open) {
+      dialog.close()
+    }
+  }, [viewer])
+
+  useEffect(() => {
+    if (!viewer) return
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previous
+    }
+  }, [viewer])
 
   return (
     <section id="work" className="section border-t border-line bg-paper-deep">
@@ -18,6 +41,10 @@ export default function Work() {
             const figureFirst = index % 2 === 1
             /* A real capture in src/assets/projects/ wins over the drawing. */
             const shot = projectImage(PROJECT_SLUGS[index])
+            const alt = plate.imageAlt ?? `${plate.title} — ${plate.kind}`
+            const figureClass = figureFirst
+              ? 'md:col-span-5 md:col-start-2 md:row-start-1'
+              : 'md:col-span-5 md:col-start-8 md:row-start-1'
 
             return (
               <article
@@ -64,24 +91,27 @@ export default function Work() {
                   </div>
                 </div>
 
-                <figure
-                  className={
-                    figureFirst
-                      ? 'md:col-span-5 md:col-start-2 md:row-start-1'
-                      : 'md:col-span-5 md:col-start-8 md:row-start-1'
-                  }
-                >
+                <figure className={figureClass}>
                   <div className="border border-line bg-paper p-2.5">
                     {shot ? (
-                      <img
-                        src={shot}
-                        alt={`${plate.title} — ${plate.kind}`}
-                        width="1600"
-                        height="1000"
-                        loading="lazy"
-                        decoding="async"
-                        className="block aspect-[16/10] w-full object-cover object-top"
-                      />
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setViewer({ src: shot, alt, title: plate.title, kind: plate.kind })
+                        }
+                        className="group block w-full cursor-zoom-in"
+                        aria-label={`${plate.title}: ${w.zoom}`}
+                      >
+                        <img
+                          src={shot}
+                          alt={alt}
+                          width="1600"
+                          height="1000"
+                          loading="lazy"
+                          decoding="async"
+                          className="block aspect-[16/10] w-full object-cover object-top transition-opacity duration-200 group-hover:opacity-90"
+                        />
+                      </button>
                     ) : (
                       <PlateFigure index={index} />
                     )}
@@ -90,6 +120,7 @@ export default function Work() {
                     <span>fig. {String(index + 2).padStart(2, '0')}</span>
                     <span className="lowercase">
                       plate {String(index + 1).padStart(2, '0')}
+                      {shot ? <span className="text-cobalt"> · {w.zoom}</span> : null}
                     </span>
                   </figcaption>
                 </figure>
@@ -98,6 +129,34 @@ export default function Work() {
           })}
         </div>
       </div>
+
+      <dialog
+        ref={dialogRef}
+        className="plate-dialog"
+        aria-label={viewer ? `${viewer.title}: ${w.zoom}` : undefined}
+        onClose={() => setViewer(null)}
+        onClick={(event) => {
+          if (event.target === dialogRef.current) setViewer(null)
+        }}
+      >
+        {viewer ? (
+          <div className="p-3 sm:p-4">
+            <div className="mb-3 flex items-baseline justify-between gap-4">
+              <p className="font-mono text-[0.75rem] tracking-[0.06em] text-cobalt">
+                {viewer.title} — {viewer.kind}
+              </p>
+              <button
+                type="button"
+                onClick={() => setViewer(null)}
+                className="shrink-0 border border-line-strong px-2 py-1 font-mono text-[0.75rem] lowercase tracking-[0.06em] text-muted transition-colors hover:border-ink hover:bg-ink hover:text-paper"
+              >
+                {w.close} ✕
+              </button>
+            </div>
+            <img src={viewer.src} alt={viewer.alt} className="mx-auto block h-auto max-w-full" />
+          </div>
+        ) : null}
+      </dialog>
     </section>
   )
 }

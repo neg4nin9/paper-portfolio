@@ -71,10 +71,14 @@ export const translations = {
       label: 'Selected work',
       title: 'Projects worth a look',
       stackLabel: 'Built with',
+      zoom: 'enlarge',
+      close: 'Close',
       plates: [
         {
           title: 'LinkTrim',
           kind: 'URL shortener — full stack',
+          imageAlt:
+            'LinkTrim home screen: the field for pasting a URL and the Shorten button.',
           description:
             'Low-latency redirects with three layers of collision prevention, automatic cleanup of dormant links on a cron schedule, and a decoupled cloud deployment across Vercel, Render and Aiven. The interface follows ISO 9241 accessibility guidance.',
           stack: ['React', 'Laravel', 'Docker', 'GitHub Actions', 'MySQL'],
@@ -279,10 +283,14 @@ export const translations = {
       label: 'Proyectos',
       title: 'Proyectos que vale la pena ver',
       stackLabel: 'Hecho con',
+      zoom: 'ampliar',
+      close: 'Cerrar',
       plates: [
         {
           title: 'LinkTrim',
           kind: 'Acortador de URLs — full stack',
+          imageAlt:
+            'Pantalla de inicio de LinkTrim: el campo para pegar una URL y el botón Acortar.',
           description:
             'Redirecciones de baja latencia con tres capas de prevención de colisiones, limpieza automática de enlaces inactivos por cron y un despliegue cloud desacoplado entre Vercel, Render y Aiven. La interfaz sigue la guía de accesibilidad ISO 9241.',
           stack: ['React', 'Laravel', 'Docker', 'GitHub Actions', 'MySQL'],

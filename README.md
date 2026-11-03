@@ -42,13 +42,17 @@ Los dibujos son el estado por defecto, no el definitivo. Para sustituir uno por 
 
 | Proyecto | Archivo |
 | --- | --- |
-| LinkTrim | `linktrim.jpg` |
+| LinkTrim | `linktrim.jpg` ✅ *(incluida)* |
 | Winter Olympics | `winter-olympics.jpg` |
 | Grupo Zenith | `grupo-zenith.jpg` |
 | CRFiguras | `crfiguras.jpg` |
 | Almacenes Unidos | `almacenes-unidos.jpg` |
 
-Formato: 1600 × 1000 px (16:10), JPG o WebP por debajo de 400 KB. Las capturas van a color; el duotono es solo del retrato.
+Formato: 1600 px de ancho, cualquier proporción horizontal (se recorta a 16:10), JPG o WebP por debajo de 400 KB. Las capturas van a color; el duotono es solo del retrato.
+
+Una captura se puede **abrir a tamaño completo** con clic o teclado: se muestra en un `<dialog>` nativo (Escape, clic fuera y retorno de foco incluidos), porque a 426 px de ancho la letra de una interfaz no se lee.
+
+![Vista ampliada de una captura](docs/preview-plate.jpg)
 
 ## Accesibilidad y rendimiento
 

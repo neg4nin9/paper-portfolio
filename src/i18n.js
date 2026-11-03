@@ -25,7 +25,7 @@ export const translations = {
       available: 'Open to work — remote or on-site',
       role: 'UI/UX designer & full-stack developer',
       tagline:
-        'I design the interface, then build the thing behind it — research and Figma prototypes on one side, Laravel and React on the other.',
+        'I see a digital product through from the first research question to the working build: I design the experience and then build it myself.',
       viewWork: 'See the work',
       downloadCV: 'Download CV',
       email: 'Email me',
@@ -37,7 +37,7 @@ export const translations = {
       label: 'Profile',
       title: 'Design and code, one handoff',
       lead: 'A bachelor’s degree in Informatics and Multimedia Technology from the University of Costa Rica, and a licentiate in progress with a UI/UX emphasis.',
-      p1: 'I build web applications end to end — database, API and interface — and I design the experience that holds them together. Research first, then Figma, then React and Laravel in Scrum sprints with Git and CI/CD.',
+      p1: 'I take digital products from the first research question to a working build: user research, interface design and development, all by the same hand, with the technical decisions always in service of the experience.',
       p2: 'What I care about: interfaces that respect the person using them, code someone else can read, and decisions backed by evidence instead of taste.',
       factsLabel: 'Fact sheet',
       facts: [
@@ -240,7 +240,7 @@ export const translations = {
       available: 'Disponible — remoto o presencial',
       role: 'Diseñador UI/UX y desarrollador full-stack',
       tagline:
-        'Diseño la interfaz y después construyo lo que hay detrás: investigación y prototipos en Figma por un lado, Laravel y React por el otro.',
+        'Llevo un producto digital de la primera pregunta a algo que funciona: diseño la experiencia y después la construyo yo mismo.',
       viewWork: 'Ver proyectos',
       downloadCV: 'Descargar CV',
       email: 'Escríbeme',
@@ -252,7 +252,7 @@ export const translations = {
       label: 'Perfil',
       title: 'Diseño y código, un solo traspaso',
       lead: 'Bachiller en Informática y Tecnología Multimedia por la Universidad de Costa Rica, y Licenciatura en curso con énfasis en UI/UX.',
-      p1: 'Construyo aplicaciones web de punta a punta — base de datos, API e interfaz — y diseño la experiencia que las sostiene. Primero la investigación, luego Figma, luego React y Laravel en sprints Scrum con Git y CI/CD.',
+      p1: 'Llevo productos digitales de la primera pregunta hasta algo que funciona: investigación, diseño y desarrollo en la misma mano, con las decisiones técnicas siempre al servicio de la experiencia.',
       p2: 'Lo que me importa: interfaces que respetan a quien las usa, código que otra persona puede leer y decisiones respaldadas por evidencia y no por gusto.',
       factsLabel: 'Ficha técnica',
       facts: [

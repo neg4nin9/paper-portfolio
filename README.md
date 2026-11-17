@@ -8,9 +8,7 @@ El sitio está diseñado como un **pliego impreso en risografía**: papel hueso,
 
 Un solo gesto fuerte: el nombre a tamaño de portada y el pliego del retrato. Todo lo demás queda en silencio y se ordena con reglas finas, tipografía y espacio.
 
-![Portada, escritorio](docs/preview-desktop.jpg)
-
-![Página completa, móvil](docs/preview-mobile.jpg)
+[Portada, escritorio](https://github.com/neg4nin9/paper-portfolio/blob/main/docs/preview-desktop.jpg) · [Página completa, móvil](https://github.com/neg4nin9/paper-portfolio/blob/main/docs/preview-mobile.jpg)
 
 ## Sistema visual
 
@@ -52,7 +50,7 @@ Formato: 1600 px de ancho, cualquier proporción horizontal (se recorta a 16:10)
 
 Una captura se puede **abrir a tamaño completo** con clic o teclado: se muestra en un `<dialog>` nativo (Escape, clic fuera y retorno de foco incluidos), porque a 426 px de ancho la letra de una interfaz no se lee.
 
-![Vista ampliada de una captura](docs/preview-plate.jpg)
+[Vista ampliada de una captura](https://github.com/neg4nin9/paper-portfolio/blob/main/docs/preview-plate.jpg)
 
 ## Accesibilidad y rendimiento
 

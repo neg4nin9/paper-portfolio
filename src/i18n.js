@@ -24,8 +24,7 @@ export const translations = {
       eyebrow: 'Portfolio 2026',
       available: 'Open to work — remote or on-site',
       role: 'UI/UX designer & full-stack developer',
-      tagline:
-        'I see a digital product through from the first research question to the working build: I design the experience and then build it myself.',
+      tagline: 'Polished designs. Intelligent systems. Beyond the pixel.',
       viewWork: 'See the work',
       downloadCV: 'Download CV',
       email: 'Email me',
@@ -35,10 +34,10 @@ export const translations = {
     },
     about: {
       label: 'Profile',
-      title: 'Design and code, one handoff',
-      lead: 'A bachelor’s degree in Informatics and Multimedia Technology from the University of Costa Rica, and a licentiate in progress with a UI/UX emphasis.',
-      p1: 'I take digital products from the first research question to a working build: user research, interface design and development, all by the same hand, with the technical decisions always in service of the experience.',
-      p2: 'What I care about: interfaces that respect the person using them, code someone else can read, and decisions backed by evidence instead of taste.',
+      title: 'Design and code, seamless handoff',
+      lead: 'B.Sc. in Informatics and Multimedia Technology from the University of Costa Rica, with a Licentiate in progress focusing on UI/UX.',
+      p1: 'I take digital products from initial research to production-ready code: UX research, interface design, and full-stack development, ensuring technical decisions always elevate the user experience.',
+      p2: 'What I value: respectful interfaces built for humans, readable and maintainable code, and decisions backed by evidence rather than guesswork.',
       factsLabel: 'Fact sheet',
       facts: [
         {
@@ -46,16 +45,16 @@ export const translations = {
           value: 'San Ramón, Alajuela, Costa Rica',
         },
         {
-          label: 'Studied',
+          label: 'Education',
           value: 'B.Sc. Informatics & Multimedia Technology, UCR —\u00A02025',
         },
         {
-          label: 'Studying',
-          value: 'Licentiate in UI/UX, University of Costa Rica',
+          label: 'Specialization',
+          value: 'Licentiate in UI/UX, University of Costa Rica (In progress)',
         },
         {
           label: 'Languages',
-          value: 'Spanish (native), English (C1, certified)',
+          value: 'Spanish (Native), English (C1 Certified)',
         },
         {
           label: 'Certifications',
@@ -63,7 +62,7 @@ export const translations = {
         },
         {
           label: 'Working style',
-          value: 'Scrum teams, research-led, accessibility as a default',
+          value: 'Scrum agile teams, research-driven, accessibility-first',
         },
       ],
     },
@@ -91,10 +90,10 @@ export const translations = {
           stack: ['React', 'Recharts', 'Excel', 'Vercel'],
         },
         {
-          title: 'Grupo Zenith',
+          title: 'Ciclo Hidalgo - Grupo Zenith',
           kind: 'E-commerce platform — client project',
           description:
-            'Academic project for a real client, built by a six-person Scrum team. I owned the Laravel REST API — JWT auth, Eloquent, pagination — and the React SPA with protected routes and an admin dashboard.',
+            'Academic project built by a six-person Scrum team. I owned the Laravel REST API — JWT auth, Eloquent, pagination — and the React SPA with protected routes and an admin dashboard.',
           stack: ['React', 'Laravel', 'Tailwind CSS', 'Chart.js', 'JWT'],
         },
         {
@@ -114,34 +113,34 @@ export const translations = {
       ],
     },
     services: {
-      label: 'What I do',
-      title: 'Four ways I help',
-      note: 'From the first user interview to the deployed build.',
-      givesLabel: 'You get',
+      label: 'Services',
+      title: 'Core expertise & deliverables',
+      note: 'From user discovery to robust production deployment.',
+      givesLabel: 'Deliverables',
       items: [
         {
           glyph: 'research',
-          title: 'UX research',
-          body: 'Interviews, personas, journey maps and heuristic audits that turn opinions into something you can test.',
-          gives: 'Interview notes, audit report, prioritised findings',
+          title: 'UX Research',
+          body: 'User interviews, personas, journey maps, and heuristic audits turning insights into actionable strategies.',
+          gives: 'Research notes, audit reports, prioritized findings',
         },
         {
           glyph: 'interface',
-          title: 'Interface design',
-          body: 'Accessible, pixel-precise screens in Figma — design systems, auto layout, component libraries that survive handoff.',
-          gives: 'Wireframes, high-fidelity screens, component library',
+          title: 'UI Design & Systems',
+          body: 'Accessible, pixel-precise Figma interfaces, design systems, and component libraries engineered for smooth handoff.',
+          gives: 'Wireframes, high-fidelity screens, component libraries',
         },
         {
           glyph: 'stack',
-          title: 'Full-stack build',
-          body: 'React on the front, Laravel and REST APIs on the back, with the database designed to carry both.',
-          gives: 'Working app, API, database schema',
+          title: 'Full-Stack Development',
+          body: 'React frontends paired with robust Laravel and REST APIs, backed by scalable database schemas.',
+          gives: 'Production-ready app, API architecture, DB schema',
         },
         {
           glyph: 'deploy',
-          title: 'Ship & run',
-          body: 'Containers, CI/CD and cloud deployments set up so the product can go live and stay that way.',
-          gives: 'Docker setup, CI pipeline, cloud deployment',
+          title: 'Deployment & Ops',
+          body: 'Containerization, CI/CD pipelines, and cloud deployments built for high availability and performance.',
+          gives: 'Docker config, CI pipeline, cloud infrastructure',
         },
       ],
     },
@@ -239,8 +238,7 @@ export const translations = {
       eyebrow: 'Portafolio 2026',
       available: 'Disponible — remoto o presencial',
       role: 'Diseñador UI/UX y desarrollador full-stack',
-      tagline:
-        'Llevo un producto digital de la primera pregunta a algo que funciona: diseño la experiencia y después la construyo yo mismo.',
+      tagline: 'Diseños pulidos. Sistemas inteligentes. Más allá del pixel.',
       viewWork: 'Ver proyectos',
       downloadCV: 'Descargar CV',
       email: 'Escríbeme',
@@ -250,10 +248,10 @@ export const translations = {
     },
     about: {
       label: 'Perfil',
-      title: 'Diseño y código, un solo traspaso',
-      lead: 'Bachiller en Informática y Tecnología Multimedia por la Universidad de Costa Rica, y Licenciatura en curso con énfasis en UI/UX.',
-      p1: 'Llevo productos digitales de la primera pregunta hasta algo que funciona: investigación, diseño y desarrollo en la misma mano, con las decisiones técnicas siempre al servicio de la experiencia.',
-      p2: 'Lo que me importa: interfaces que respetan a quien las usa, código que otra persona puede leer y decisiones respaldadas por evidencia y no por gusto.',
+      title: 'Diseño y código sin fricción',
+      lead: 'Bachiller en Informática y Tecnología Multimedia por la Universidad de Costa Rica, con Licenciatura en curso enfocada en UI/UX.',
+      p1: 'Conduzco productos digitales desde la investigación inicial hasta código en producción: investigación UX, diseño de interfaces y desarrollo full-stack, asegurando que las decisiones técnicas potencien la experiencia.',
+      p2: 'Lo que valoro: interfaces respetuosas centradas en las personas, código limpio y mantenible, y decisiones respaldadas por evidencia en lugar de intuición.',
       factsLabel: 'Ficha técnica',
       facts: [
         {
@@ -265,20 +263,20 @@ export const translations = {
           value: 'Bach. Informática y Tecnología Multimedia, UCR —\u00A02025',
         },
         {
-          label: 'Cursando',
-          value: 'Licenciatura en UI/UX, Universidad de Costa Rica',
+          label: 'Especialización',
+          value: 'Licenciatura en UI/UX, Universidad de Costa Rica (En curso)',
         },
         {
           label: 'Idiomas',
-          value: 'Español (nativo), Inglés (C1 certificado)',
+          value: 'Español (Nativo), Inglés (C1 Certificado)',
         },
         {
           label: 'Certificaciones',
           value: 'Google Analytics 4 (2025), Inglés C1 — CINDE\u00A0Jobs\u00A0Belt',
         },
         {
-          label: 'Forma de trabajo',
-          value: 'Equipos Scrum, investigación primero, accesibilidad por defecto',
+          label: 'Metodología',
+          value: 'Equipos ágiles Scrum, enfoque en investigación y accesibilidad',
         },
       ],
     },
@@ -306,10 +304,10 @@ export const translations = {
           stack: ['React', 'Recharts', 'Excel', 'Vercel'],
         },
         {
-          title: 'Grupo Zenith',
+          title: 'Ciclo Hidalgo - Grupo Zenith',
           kind: 'Plataforma e-commerce — proyecto de cliente',
           description:
-            'Proyecto académico para un cliente real, desarrollado por un equipo Scrum de seis personas. Me encargué de la API REST en Laravel — JWT, Eloquent, paginación — y de la SPA en React con rutas protegidas y dashboard de administración.',
+            'Proyecto académico desarrollado por un equipo Scrum de seis personas. Me encargué de la API REST en Laravel — JWT, Eloquent, paginación — y de la SPA en React con rutas protegidas y dashboard de administración.',
           stack: ['React', 'Laravel', 'Tailwind CSS', 'Chart.js', 'JWT'],
         },
         {
@@ -330,33 +328,33 @@ export const translations = {
     },
     services: {
       label: 'Servicios',
-      title: 'Cuatro formas de ayudar',
-      note: 'Desde la primera entrevista hasta el despliegue.',
-      givesLabel: 'Recibes',
+      title: 'Áreas de especialización y entregables',
+      note: 'Desde el descubrimiento de usuario hasta el despliegue en producción.',
+      givesLabel: 'Entregables',
       items: [
         {
           glyph: 'research',
           title: 'Investigación UX',
-          body: 'Entrevistas, personas, mapas de recorrido y auditorías heurísticas que convierten opiniones en algo que se puede probar.',
-          gives: 'Notas de entrevista, informe de auditoría, hallazgos priorizados',
+          body: 'Entrevistas, personas, mapas de recorrido y auditorías heurísticas que transforman insights en estrategias accionables.',
+          gives: 'Notas de investigación, informes de auditoría, hallazgos priorizados',
         },
         {
           glyph: 'interface',
-          title: 'Diseño de interfaces',
-          body: 'Pantallas accesibles y precisas en Figma: sistemas de diseño, auto layout y bibliotecas de componentes que sobreviven al traspaso.',
-          gives: 'Wireframes, pantallas de alta fidelidad, biblioteca de componentes',
+          title: 'Diseño UI y Sistemas',
+          body: 'Interfaces accesibles y precisas en Figma, sistemas de diseño y librerías de componentes optimizados para el traspaso.',
+          gives: 'Wireframes, pantallas de alta fidelidad, librería de componentes',
         },
         {
           glyph: 'stack',
-          title: 'Desarrollo full-stack',
-          body: 'React en el frontend, Laravel y APIs REST en el backend, con una base de datos pensada para sostener ambos.',
-          gives: 'Aplicación funcionando, API, esquema de base de datos',
+          title: 'Desarrollo Full-Stack',
+          body: 'Interfaces en React conectadas a APIs REST y Laravel, respaldadas por esquemas de base de datos escalables.',
+          gives: 'Aplicación funcional, arquitectura de API, esquema de base de datos',
         },
         {
           glyph: 'deploy',
-          title: 'Despliegue y operación',
-          body: 'Contenedores, CI/CD y despliegue en la nube configurados para que el producto salga y se mantenga en línea.',
-          gives: 'Configuración Docker, pipeline de CI, despliegue cloud',
+          title: 'Despliegue y Operaciones',
+          body: 'Contenedores, pipelines de CI/CD y despliegues en la nube configurados para garantizar alta disponibilidad y rendimiento.',
+          gives: 'Configuración Docker, pipeline de CI, infraestructura cloud',
         },
       ],
     },
